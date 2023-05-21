@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav ul {
+    position: fixed;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5rem;
+    background-color: rgb(203, 88, 0);
+    height: 3rem;
+    width: 100%;
+    font-size: 20px;
+    z-index: 99;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+
+a:hover {
+    color: #333;
+}
+
+section {
+    min-height: 100vh;
+    padding-top: 5rem;
+}
+
+#home {
+    background-image: url(./img/Tela-de-fundo.png);
+    background-position: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nanquim {
+    background: linear-gradient(rgba(0,0,0,0.3), rgb(0, 0, 0)),url(./img/nanquim-fundo.png);
+    background-position: absolut;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tintaAcrilica{
+    background: linear-gradient(rgba(0,0,0,0.5), rgb(0, 0, 0)),url(./img/nanquim.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#artista {
+    background: linear-gradient(rgba(0,0,0,0.5), rgb(0, 0, 0)),url(./img/artista.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*pagina nanquim*/
+
+.slidershow {
+    width: 1000px;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.middle {
+    position: absolute;
+    top: 152%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.navigation {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.bar {
+    width: 50px;
+    height: 15px;
+    border: 3px solid rgb(255, 110, 0);
+    border-radius: 5px;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar:hover {
+    background: rgb(239, 106, 4);
+}
+
+input {
+    display: none;
+}
+
+.slides {
+    width: 1000%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+    width: 10%;
+    transition: 0.6s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+#r2:checked ~ .s1 {
+    margin-left: -10%;
+}
+#r3:checked ~ .s1 {
+    margin-left: -20%;
+}
+#r4:checked ~ .s1 {
+    margin-left: -30%;
+}
+#r5:checked ~ .s1 {
+    margin-left: -40%;
+}
+#r6:checked ~ .s1 {
+    margin-left: -50%;
+}
+#r7:checked ~ .s1 {
+    margin-left: -60%;
+}
+#r8:checked ~ .s1 {
+    margin-left: -70%;
+}
+#r9:checked ~ .s1 {
+    margin-left: -80%;
+}
+#r10:checked ~ .s1 {
+    margin-left: -90%;
+}
+
+
+/*pagina tinta acrilica*/
+
+.slidershow-2 {
+    width: 1000px;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 30px;
+}
+
+.middle-2 {
+    position: absolute;
+    top: 252%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.slides-2 {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slide-2 {
+    width: 20%;
+    transition: 0.6s;
+}
+
+.slide-2 img {
+    width: 100%;
+    height: 100%;
+}
+
+#r11:checked ~ .s2 {
+    margin-left: 0;
+}
+#r12:checked ~ .s2 {
+    margin-left: -20%;
+}
+#r13:checked ~ .s2 {
+    margin-left: -40%;
+}
+#r14:checked ~ .s2 {
+    margin-left: -60%;
+}
+#r15:checked ~ .s2 {
+    margin-left: -80%;
+}
+
+
+/*pagina do artista*/
+
+.content-container {
+    height: 100vh;
+}
+
+.profile-container {
+    color: #333;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-content {
+    width: 50%;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 340px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 100px;
+}
+
+.profile-image {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid #D870DB;
+}
+
+.name-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    margin-top: 15px;
+}
+
+.profile-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 17px;
+    text-align: center;
+    width: 76%;
+    margin-top: 10px;
+}
+
+.profile-button {
+    width: 150px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    background-color: #D870DB;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    margin-top: 35px;
+    cursor: pointer;
+}
+
+.profile-button:hover {
+    background-color: rgb(203, 88, 0);
+    color: white;
+}
+
+.profile-sinopse {
+    width: 430px;
+    margin-left: 40px;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 17px;
+    margin-bottom: 100px;
+    text-align: justify;
+}
